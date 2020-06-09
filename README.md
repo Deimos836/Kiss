@@ -3,7 +3,7 @@ Kiss is a php library usefull to basic SQL request and data exploitation (image 
 ## Usage
 ### KissData
 ```php
-$data = new KissData($data);
+$data = new kissData($data);
 
 $data->safe_size($size, $execute=false); // Check the size and if the file is executatble
 $data->hash($function=PASSWORD_BCRYPT, $cost=12); // Hash string (to protect password for example ...)
