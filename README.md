@@ -4,6 +4,7 @@ Kiss is a php library usefull to basic SQL request and data exploitation (image 
 ### KissData
 ```php
 $data = new KissData($data);
+
 $data->safe_size($size, $execute=false); // Check the size and if the file is executatble
 $data->hash($function=PASSWORD_BCRYPT, $cost=12); // Hash string (to protect password for example ...)
 $data->is_image(); // Check if the file is an image
@@ -16,6 +17,7 @@ $data->str_replace_array($array, $text); // str_replace() but using array
 ### KissSQL
 ```php
 $bdd = new kissSQL([$host, $name, $user, $pwd]);
+
 $bdd->PDO(); // Return PDO object
 $bdd->select($table, $colonum, $where = [], $limit = '', $desc = false); // SQL select request (retunr array);
 $bdd->insert($table, $value); // SQL insert request 
@@ -23,5 +25,5 @@ $bdd->count($table, $where); // SQL count request (return int)
 $bdd->update($table, $where, $value); // SQL update request
 $bdd->delete($table, $where); // SQL delete request
 $bdd->increment($table, $colonum);
-decrement($table, $colonum);
+$bdd->decrement($table, $colonum);
 ```
